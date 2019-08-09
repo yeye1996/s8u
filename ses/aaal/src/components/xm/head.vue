@@ -79,7 +79,7 @@ export default {
       var url = "search";
       this.axios.get(url, { params: obj }).then(result => {
         if (result.data.code > 0) {  
-          this.$router.push("/list");
+          this.$router.push({ path: "details", query: { id: result.data.data[0].mid } });
         } else {
           this.$messagebox("提示", "无此类型商品"); 
         }
