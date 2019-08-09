@@ -6,11 +6,11 @@ const session = require("express-session");
 //配置第三方模块
 //配置连接池
 var pool = mysql.createPool({
-  host: "127.0.0.1",
-  user: "root",
-  password: "",
+  host: 'w.rdc.sae.sina.com.cn',
+  user: 'oom5mozlx2',
+  password: 'hw4xm4zixzm2lkwi4k12zhj5zlxiw54ll4525kx2',
   port: 3306,
-  database: "xm",
+  database: 'app_qibaju',
   connectionLimit: 15
 });
 //跨域
@@ -28,7 +28,7 @@ server.use(session({
 }));
 //指定静态目录
 server.use(express.static("public"));
-server.listen(3000);
+server.listen(5050);
 
 
 /**********************1.用户************************ */
